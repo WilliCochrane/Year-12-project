@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <div class="nav-container">
+            <a class="nav-page">0</a>
+            <a class="nav-page">1</a>
+            <a class="nav-page">2</a>
+            <a class="nav-page">3</a>
+            <div></div>
+            <a class="nav-page">4</a>
+            <a class="nav-page">5</a>
+            <a class="nav-page">6</a> 
+        </div>
+        <div class="filler"></div>
+        <div class="content-container">
+            {% block content %}
+            <h1>{{ name }}</h1>
+            <h1>{{ stars }}</h1>
+            <h1>{{ climbing_type_id }}</h1>
+            <h1>{{ grade }}</h1>
+            <h1>{{ length }}</h1>
+            <h1>{{ bolts }}</h1>
+            <h1>{{ rock_wall_id }}</h1>
+            {% endblock %}
+        </div>
+        <footer>:(</footer>
+    </body>
+</html>
