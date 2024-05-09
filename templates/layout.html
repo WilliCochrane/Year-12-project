@@ -15,16 +15,17 @@
             <a class="nav-page">5</a>
             <a class="nav-page">6</a> 
         </div>
-        <div class="filler"></div>
+        <div class="filler">filler</div>
         <div class="content-container">
             {% block content %}
-            <h1>{{ name }}</h1>
-            <h1>{{ stars }}</h1>
-            <h1>{{ climbing_type_id }}</h1>
-            <h1>{{ grade }}</h1>
-            <h1>{{ length }}</h1>
-            <h1>{{ bolts }}</h1>
-            <h1>{{ rock_wall_id }}</h1>
+            <div class="info">name: {{ name }}</div>
+            <div class="info">stars: {{ stars }}</div>
+            <div class="info">climbing type: {{ climbing_type_id }}</div>
+            <div class="info">grade: {{ grade }}</div>
+            <div class="info">length: {{ length }}m</div>
+            <div class="info">bolts:</div>
+            <div class="info">bolts: {{ bolts }}</div>
+            <div class="info">rock_wall: {{ rock_wall_id }}</div>
             {% endblock %}
         </div>
         <footer>:(</footer>
