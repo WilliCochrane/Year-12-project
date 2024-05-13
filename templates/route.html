@@ -1,10 +1,33 @@
-{%extends 'layout.html'%}
-{% block content %}
-{{ name }}
-{{ stars }}
-{{ climbing_type_id }}
-{{ grade }}
-{{ length }}
-{{ bolts }}
-{{ rock_wall_id }}
-{% endblock %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        {% block content %}
+        <div class="nav-container">
+            <a class="nav-page">0</a>
+            <a class="nav-page">1</a>
+            <a class="nav-page">2</a>
+            <a class="nav-page">3</a>
+            <div></div>
+            <a class="nav-page">4</a>
+            <a class="nav-page">5</a>
+            <a class="nav-page">6</a> 
+        </div>
+        <div class="filler">filler</div>
+        <div class="content-container">
+            <div class="info">name: {{ name }}</div>
+            <img scr="{{ stars }}">
+            <div class="info">climbing type: {{ climbing_type_id }}</div>
+            <div class="info">grade: {{ grade }}</div>
+            <div class="info">length: {{ length }}m</div>
+            <div class="info">bolts:</div>
+            <div class="info">bolts: {{ bolts }}</div>
+            <div class="info">rock_wall: {{ rock_wall_id }}</div>
+        </div>
+        {% endblock %}
+        <footer>:(</footer>
+    </body>
+</html>

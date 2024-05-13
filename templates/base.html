@@ -4,6 +4,7 @@
         <title>Document</title>
         <link rel="stylesheet" href="/static/style.css">
     </head>
+    {% block content %}
     <body>
         <div class="nav-container">
             <a class="nav-page">0</a>
@@ -17,17 +18,8 @@
         </div>
         <div class="filler">filler</div>
         <div class="content-container">
-            {% block content %}
-            <div class="info">name: {{ name }}</div>
-            <div class="info">stars: {{ stars }}</div>
-            <div class="info">climbing type: {{ climbing_type_id }}</div>
-            <div class="info">grade: {{ grade }}</div>
-            <div class="info">length: {{ length }}m</div>
-            <div class="info">bolts:</div>
-            <div class="info">bolts: {{ bolts }}</div>
-            <div class="info">rock_wall: {{ rock_wall_id }}</div>
-            {% endblock %}
         </div>
         <footer>:(</footer>
     </body>
+    {% endblock %}
 </html>
