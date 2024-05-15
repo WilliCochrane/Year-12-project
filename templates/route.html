@@ -18,8 +18,10 @@
         </div>
         <div class="filler">filler</div>
         <div class="content-container">
-            <div class="info">name: {{ name }}</div>
-            <img scr="{{ stars }}">
+            <div class="name-container">
+                <div class="name">{{ name }}</div>
+                <div class="stars"><img class="star-image" src="{{ stars }}" alt="Stars"></div>
+            </div>
             <div class="info">climbing type: {{ climbing_type_id }}</div>
             <div class="info">grade: {{ grade }}</div>
             <div class="info">length: {{ length }}m</div>

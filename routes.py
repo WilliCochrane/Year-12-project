@@ -15,21 +15,21 @@ def do_sql(sql):
 
 def num_to_stars(num:int):
     if num == 0:
-        stars = "static\Icons\no-star.png"
+        stars = "/static/Icons/no-star.png"
     elif num == 1:
-        stars = "static\Icons\one-star.png"
+        stars = "/static/Icons/one-star.png"
     elif num == 2:
-        stars = "static\Icons\two-star.png"
+        stars = "/static/Icons/two-star.png"
     elif num == 3:
-        stars = "static\Icons\three-star.png"
+        stars = "/static/Icons/three-star.png"
     else:
-        stars = "static\Icons\no-star.png"
+        stars = "/static/Icons/no-star.png"
     return stars
 
 
 @app.route('/')
 def homepage():
-    return render_template('home.html')
+    return render_template('route.html')
 
 
 @app.route('/about')
@@ -42,7 +42,7 @@ def route(id):
     route = do_sql("SELECT name,stars,climbing_type_id,grade,length,bolts,rock_wall_id FROM Route WHERE id = '{}'".format(id))
     print(route)
     stars = num_to_stars(route[0][1])
-    return render_template('routes.html', name=route[0][0], stars=stars, climbing_type_id=route[0][2], grade=route[0][3], length=route[0][4], bolts=route[0][5], rock_wall_id=route[0][6])
+    return render_template('route.html', name=route[0][0], stars=stars, climbing_type_id=route[0][2], grade=route[0][3], length=route[0][4], bolts=route[0][5], rock_wall_id=route[0][6])
 
 if __name__ == "__main__":  # Last lines
     app.run(debug=True)
