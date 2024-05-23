@@ -16,18 +16,26 @@
             <a class="nav-page">5</a>
             <a class="nav-page">6</a> 
         </div>
-        <div class="filler">filler</div>
         <div class="content-container">
-            <div class="name-container">
-                <div class="name">{{ name }}</div>
-                <div class="stars"><img class="star-image" src="{{ stars }}" alt="Stars"></div>
+            <div class="filler">filler</div>
+            <div class="name"><img class="star-image" src="{{ stars }}" alt="Stars">{{ name }}</div>
+            <br>
+            <div class="info-grid">
+                <div class="info-container">
+                    <div class="info">climbing type: </div>
+                    <div class="info">grade:</div>
+                    <div class="info">length: </div>
+                    <div class="info">bolts:</div>
+                    <div class="info">rock_wall: </div>
+                </div>
+                <div class="info-container">
+                    <div class="info">{{ climbing_type_id }}</div>
+                    <div class="info">{{ grade }}</div>
+                    <div class="info">{{ length }}m</div>
+                    <div class="info">{{ bolts }}</div>
+                    <div class="info">{{ rock_wall_id }}</div>
+                </div>
             </div>
-            <div class="info">climbing type: {{ climbing_type_id }}</div>
-            <div class="info">grade: {{ grade }}</div>
-            <div class="info">length: {{ length }}m</div>
-            <div class="info">bolts:</div>
-            <div class="info">bolts: {{ bolts }}</div>
-            <div class="info">rock_wall: {{ rock_wall_id }}</div>
         </div>
         {% endblock %}
         <footer>:(</footer>
