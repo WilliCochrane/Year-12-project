@@ -36,13 +36,19 @@ def homepage():
 def aboutpage():
     return "about"
 
+@app.route('/rock-wall/<int:id>')
+def rockwall(id):
+    rockwall = do_sql("SELECT * FROM Rock_wall WHERE id = '{}'".format(id))
+    routes = do_sql("SELECT * FROM Route WHERE Route.rock_wall_id = '{}'".format(id))
+    return render_template('rockwall.html', rockwall = rockwall, routes = routes)
+
+
 
 @app.route('/route/<int:id>')
 def route(id):
-    route = do_sql("SELECT name,stars,climbing_type_id,grade,length,bolts,rock_wall_id FROM Route WHERE id = '{}'".format(id))
-    print(route)
-    stars = num_to_stars(route[0][1])
-    return render_template('route.html', name=route[0][0], stars=stars, climbing_type_id=route[0][2], grade=route[0][3], length=route[0][4], bolts=route[0][5], rock_wall_id=route[0][6])
+    route = do_sql("SELECT * FROM Route WHERE id = '{}'".format(id))
+    stars = num_to_stars(route[0][2])
+    return render_template('route.html', name=route[0][1], stars=stars, climbing_type_id=route[0][3], grade=route[0][4], length=route[0][5], bolts=route[0][6], rock_wall_id=route[0][7])
 
 if __name__ == "__main__":  # Last lines
     app.run(debug=True)

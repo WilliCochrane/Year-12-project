@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        {% block content %}
+        <div class="nav-container">
+            <a class="nav-page">0</a>
+            <a class="nav-page">1</a>
+            <a class="nav-page">2</a>
+            <a class="nav-page">3</a>
+            <div></div>
+            <a class="nav-page">4</a>
+            <a class="nav-page">5</a>
+            <a class="nav-page">6</a> 
+        </div>
+        <div class="content-container">
+            <div class="filler">filler</div>
+            <div class="name">{{ rockwall[0][1] }}</div>
+            <br>
+            <div class="description">{{ rockwall[0][5] }}</div>
+            <div class="info-grid">
+                <div class="info-container">
+                    <div class="info">Description</div>
+                    <div class="info">rock wall:</div>
+                    <div class="info">length:</div>
+                    <div class="info">grade:</div>
+                    <div class="info">bolts:</div>
+                </div>
+                <div class="info-container">
+
+                    <div class="info">{{ rock_wall_id }}</div>
+                    <div class="info">{{ length }}m</div>
+                    <div class="info">{{ grade }}</div>
+                    <div class="info">{{ bolts }}</div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+        <footer>:(</footer>
+    </body>
+</html>
