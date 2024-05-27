@@ -20,22 +20,19 @@
             <div class="filler">filler</div>
             <div class="name">{{ rockwall[0][1] }}</div>
             <br>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2890.7745553439972!2d172.6568459549088!3d-43.56958053722222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDM0JzEwLjUiUyAxNzLCsDM5JzMxLjIiRQ!5e0!3m2!1sen!2snz!4v1716850531284!5m2!1sen!2snz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="description">{{ rockwall[0][5] }}</div>
             <div class="info-grid">
-                <div class="info-container">
-                    <div class="info">Description</div>
-                    <div class="info">rock wall:</div>
-                    <div class="info">length:</div>
-                    <div class="info">grade:</div>
-                    <div class="info">bolts:</div>
-                </div>
-                <div class="info-container">
-
-                    <div class="info">{{ rock_wall_id }}</div>
-                    <div class="info">{{ length }}m</div>
-                    <div class="info">{{ grade }}</div>
-                    <div class="info">{{ bolts }}</div>
-                </div>
+                    <div class="info-prompt">Description</div>
+                    <div class="info">{{ rockwall[0][1] }}</div>
+                    <div class="info-prompt">rock wall:</div>
+                    <div class="info">{{ rockwall[0][1] }}</div>
+                    <div class="info-prompt">length:</div>
+                    <div class="info">{{ rockwall[0][1] }}</div>
+                    <div class="info-prompt">grade:</div>
+                    <div class="info">{{ rockwall[0][1] }}</div>
+                    <div class="info-prompt">bolts:</div>
+                    <div class="info">{{ rockwall[0][1] }}</div>
             </div>
         </div>
         {% endblock %}
