@@ -48,7 +48,7 @@ def rockwall(id):
 def route(id):
     route = do_sql("SELECT * FROM Route WHERE id = '{}'".format(id))
     stars = num_to_stars(route[0][2])
-    return render_template('route.html', name=route[0][1], stars=stars, climbing_type_id=route[0][3], grade=route[0][4], length=route[0][5], bolts=route[0][6], rock_wall_id=route[0][7])
+    return render_template('route.html', name=route[0][1], stars=stars, climbing_type_id=route[0][3], grade=route[0][4], length=route[0][5], bolts=route[0][6], rock_wall_id=route[0][7], location=route[0][2])
 
 if __name__ == "__main__":  # Last lines
     app.run(debug=True)
